@@ -4,12 +4,24 @@ project:
   id: 16618fd8-81e7-4e92-987f-36405c569003
   title: KOMPUTASI ALJABAR LINEAR
   description:
-  # keywords: []
+  authors : [Yohanes Oktanio]
+  github: https://github.com/yohanesokta
+  
+  keywords: [Komputasi Aljabar Linier]
   # authors: []
   # github:
   # To autogenerate a Table of Contents, run "jupyter book init --write-toc"
+  toc:
+    - file: src/persamaan-linier.ipynb
+    - file: src/contoh-persamaan-linier.ipynb
 site:
   template: book-theme
   options:
-  #   favicon: favicon.ico
-    logo: ./img/utm-logo.png
+    favicon: https://avatars.githubusercontent.com/u/111877508?v=4
+    logo: ./img/utm-logo.png  
+    numbered: true
+    style: assets/custom.css
+  actions:
+    - title: Follow GitHub
+      url: https://github.com/yohanesokta
+      icon: github

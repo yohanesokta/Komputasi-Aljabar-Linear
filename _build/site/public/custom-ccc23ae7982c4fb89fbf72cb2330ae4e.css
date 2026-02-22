@@ -1,0 +1,13 @@
+@import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@300;400;500;600;700&display=swap');
+
+html, body {
+  font-family: "JetBrains Mono", monospace !important;
+  background-color: var(--bg-dark);
+}
+
+.md-header__button.md-logo::after {
+  content: " Yohanes Lab";
+  font-weight: 600;
+  margin-left: 10px;
+  color: #22d3ee;
+}
