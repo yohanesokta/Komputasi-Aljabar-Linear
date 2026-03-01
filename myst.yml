@@ -13,7 +13,9 @@ project:
   # To autogenerate a Table of Contents, run "jupyter book init --write-toc"
   toc:
     - file: src/persamaan-linier.ipynb
-    - file: src/contoh-persamaan-linier.ipynb
+    - childern:
+      - file: src/contoh-persamaan-linier.ipynb
+    - file: src/s-linear.md
 site:
   template: book-theme
   options:
