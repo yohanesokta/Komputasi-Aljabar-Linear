@@ -12,16 +12,15 @@ project:
   # github:
   # To autogenerate a Table of Contents, run "jupyter book init --write-toc"
   toc:
-    - file: src/persamaan-linier.ipynb
-    - childern:
-      - file: src/contoh-persamaan-linier.ipynb
     - file: src/s-linear.md
+    - file: src/persamaan-linier.ipynb
+    - file: src/contoh-persamaan-linier.ipynb
 site:
   template: book-theme
   options:
     favicon: https://avatars.githubusercontent.com/u/111877508?v=4
     logo: ./img/utm-logo.png  
-    numbered: true
+    # numbered: true
     style: assets/custom.css
   actions:
     - title: Follow GitHub
