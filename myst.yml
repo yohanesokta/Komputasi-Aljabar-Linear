@@ -14,7 +14,9 @@ project:
   toc:
     - file: src/s-linear.md
     - file: src/persamaan-linier.ipynb
-    - file: src/contoh-persamaan-linier.ipynb
+      children:
+        - file: src/contoh-persamaan-linier.ipynb
+        - file: src/eliminasi-gause.md
 site:
   template: book-theme
   options:
@@ -22,6 +24,7 @@ site:
     logo: ./img/utm-logo.png  
     # numbered: true
     style: assets/custom.css
+  htm
   actions:
     - title: Follow GitHub
       url: https://github.com/yohanesokta

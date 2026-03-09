@@ -1,401 +1,102 @@
+---
+title: Komputasi Aljabar Linier
+date: 2026-02-11
+---
 
-# Sistem Persamaan Linear dan Eliminasi Gaussian
+# Komputasi Aljabar Linier
 
-## Teori, Representasi Matriks, dan Metode Penyelesaian
+## Pengertian
 
-Sistem persamaan linear merupakan salah satu topik fundamental dalam aljabar linear. Pembahasan ini menjadi dasar bagi berbagai konsep lanjutan seperti ruang vektor, kebebasan linear, rank matriks, serta transformasi linear. Persamaan linier adalah sebuah persamaan aljabar, yang tiap sukunya menganndung konstanta, atau perkalian konstanta dengan variabel tunggal. Persamaan ini dapat dikatakan linier dikarenakan hubungan matematis ini dapat digambarkan sebagai garis lurus dalam Sistem Koordinat Kartesius.
+Komputasi Aljabar Linier merupakan bidang yang menggabungkan konsep **aljabar linier** dengan teknik **komputasi menggunakan komputer**. Bidang ini berfokus pada bagaimana metode-metode dalam aljabar linier dapat dihitung secara efisien menggunakan algoritma dan perangkat komputasi.
 
-Setiap suku pada persamaan linier mengandung konstanta atau perkalian konstanta dengan variabel tunggal. Dalam persamaan liiner akan ada beberapa hal penting, seperti variabel, koefisien, dan juga konstanta.
+Dalam banyak kasus, perhitungan aljabar linier seperti penyelesaian sistem persamaan linier, operasi matriks berukuran besar, ataupun transformasi vektor dapat menjadi sangat kompleks jika dihitung secara manual. Oleh karena itu, pendekatan komputasi digunakan untuk membantu menyelesaikan perhitungan tersebut dengan lebih cepat, akurat, dan efisien.
 
-
-# 1. Persamaan Linear
-
-## 1.1 Ekspresi Linear
-
-Sebuah ekspresi linear dalam $$n$$ variabel $$x_1, x_2, \dots, x_n$$ adalah ekspresi berbentuk
-
-$$
-a_1x_1 + a_2x_2 + \dots + a_nx_n
-$$
-
-dengan koefisien $$a_1, a_2, \dots, a_n \in \mathbb{R}$$.
-
-Disebut linear karena:
-
-* Setiap variabel berpangkat satu,
-* Tidak ada perkalian antar variabel,
-* Tidak ada fungsi nonlinear dari variabel.
+Melalui komputasi aljabar linier, berbagai permasalahan matematika dapat dimodelkan dalam bentuk **vektor dan matriks**, kemudian diselesaikan menggunakan algoritma numerik yang dijalankan oleh komputer. Pendekatan ini sangat penting dalam berbagai bidang modern seperti sains data, kecerdasan buatan, simulasi ilmiah, hingga grafika komputer.
 
 ---
 
-## 1.2 Persamaan Linear
+# Aljabar Linier
 
-Persamaan linear adalah persamaan yang dapat dituliskan dalam bentuk baku:
+Aljabar linier merupakan salah satu cabang matematika yang mempelajari tentang **vektor, matriks, ruang vektor, serta transformasi linier**. Konsep-konsep tersebut digunakan untuk merepresentasikan dan memodelkan berbagai fenomena matematis maupun permasalahan nyata.
 
-$$
-a_1x_1 + a_2x_2 + \dots + a_nx_n = b
-$$
+Dalam aljabar linier, banyak permasalahan dapat direpresentasikan dalam bentuk sistem persamaan linier. Dengan menggunakan matriks dan operasi-operasinya, sistem tersebut dapat dianalisis dan diselesaikan secara sistematis.
 
-Jika $$b = 0$$, maka persamaan disebut **homogen**.
-Jika $$b \neq 0$$, maka disebut **nonhomogen**.
+Aljabar linier memiliki peranan yang sangat penting karena konsepnya digunakan dalam berbagai bidang ilmu, seperti:
 
-Contoh persamaan linear:
+- Matematika terapan
+- Ilmu komputer
+- Teknik dan rekayasa
+- Fisika
+- Statistik dan analisis data
 
-$$
-4x - 3y + 2z = 5
-$$
-
-Contoh persamaan nonlinear:
-
-$$
-x^2 + y = 3
-$$
-
-Karena terdapat pangkat dua pada variabel.
+Karena sifatnya yang fundamental, aljabar linier sering dianggap sebagai **fondasi matematika bagi banyak teknologi modern**.
 
 ---
 
-# 2. Sistem Persamaan Linear
+# Komputasi
 
-Sistem persamaan linear adalah kumpulan beberapa persamaan linear yang harus dipenuhi secara bersamaan.
+Komputasi merupakan proses penyelesaian suatu masalah dengan menggunakan **algoritma dan perhitungan yang dilakukan oleh komputer**. Dalam konteks ilmu komputer, komputasi tidak hanya berkaitan dengan perhitungan angka, tetapi juga melibatkan pemodelan masalah, penyusunan algoritma, dan analisis hasil perhitungan.
 
-Secara umum, sistem dengan $$m$$ persamaan dan $$n$$ variabel dapat ditulis sebagai:
+Secara umum, komputasi digunakan untuk:
 
-$$
-\begin{aligned}
-a_{11}x_1 + a_{12}x_2 + \dots + a_{1n}x_n &= b_1 \
-a_{21}x_1 + a_{22}x_2 + \dots + a_{2n}x_n &= b_2 \
-\vdots \
-a_{m1}x_1 + a_{m2}x_2 + \dots + a_{mn}x_n &= b_m
-\end{aligned}
-$$
+- Mengolah data dalam jumlah besar
+- Menyelesaikan model matematika yang kompleks
+- Melakukan simulasi berbagai fenomena ilmiah
+- Menganalisis dan memprediksi suatu sistem
 
-Indeks pertama menunjukkan baris (persamaan ke-$$i$$), sedangkan indeks kedua menunjukkan kolom (variabel ke-$$j$$).
+Dalam komputasi ilmiah, komputer dimanfaatkan untuk melakukan perhitungan numerik yang sulit atau bahkan tidak mungkin dilakukan secara manual dalam waktu yang wajar.
 
 ---
 
-## 2.1 Solusi Sistem Linear
+# Hubungan Komputasi dengan Aljabar Linier
 
-Solusi sistem adalah suatu $$n$$-tuple
+Aljabar linier menyediakan **struktur matematika** seperti vektor dan matriks, sedangkan komputasi menyediakan **alat dan algoritma** untuk memproses struktur tersebut secara efisien.
 
-$$
-(s_1, s_2, \dots, s_n)
-$$
+Dengan menggabungkan keduanya, kita dapat menyelesaikan berbagai masalah yang melibatkan data dalam jumlah besar atau model matematika yang kompleks. Sebagai contoh, sistem persamaan linier dengan ratusan atau ribuan variabel dapat diselesaikan menggunakan metode numerik yang dijalankan oleh komputer.
 
-yang jika disubstitusikan ke seluruh persamaan menghasilkan pernyataan benar.
-
-Secara umum, sistem linear memiliki tiga kemungkinan:
-
-1. Tidak memiliki solusi (tidak konsisten).
-2. Memiliki tepat satu solusi.
-3. Memiliki tak hingga banyak solusi.
+Kombinasi antara teori matematika dan komputasi ini menjadikan komputasi aljabar linier sebagai salah satu bidang yang sangat penting dalam perkembangan teknologi modern.
 
 ---
 
-# 3. Representasi Matriks
+# Materi yang Dipelajari dalam Aljabar Linier
 
-Sistem linear dapat ditulis lebih ringkas menggunakan matriks.
+Beberapa konsep utama yang biasanya dipelajari dalam aljabar linier antara lain:
 
-Jika
+- Sistem Persamaan Linier dan metode penyelesaiannya
+- Vektor dan ruang vektor
+- Matriks dan operasi pada matriks
+- Determinan
+- Transformasi linier
+- Nilai eigen dan vektor eigen
 
-$$
-A =
-\begin{bmatrix}
-a_{11} & a_{12} & \dots & a_{1n} \
-a_{21} & a_{22} & \dots & a_{2n} \
-\vdots & \vdots & \ddots & \vdots \
-a_{m1} & a_{m2} & \dots & a_{mn}
-\end{bmatrix}
-$$
-
-dan
-
-$$
-X =
-\begin{bmatrix}
-x_1 \
-x_2 \
-\vdots \
-x_n
-\end{bmatrix},
-\quad
-b =
-\begin{bmatrix}
-b_1 \
-b_2 \
-\vdots \
-b_m
-\end{bmatrix},
-$$
-
-maka sistem dapat dituliskan sebagai
-
-$$
-AX = b
-$$
-
-Ini disebut representasi matriks dari sistem linear.
+Konsep-konsep tersebut menjadi dasar dalam berbagai metode komputasi yang digunakan untuk memecahkan masalah matematika dan komputasi.
 
 ---
 
-## 3.1 Matriks Augmentasi
+# Penerapan Komputasi Aljabar Linier
 
-Untuk keperluan eliminasi, kita sering menggunakan **matriks augmentasi**, yaitu matriks yang memuat koefisien dan konstanta sekaligus:
+Komputasi aljabar linier memiliki banyak penerapan dalam berbagai bidang ilmu dan teknologi modern. Beberapa contoh penerapannya antara lain sebagai berikut.
 
-$$
-[A \mid b]
-$$
+### Machine Learning dan Artificial Intelligence
 
-Contoh sistem:
+Dalam bidang *Machine Learning* dan *Artificial Intelligence*, data biasanya direpresentasikan dalam bentuk **vektor dan matriks**. Algoritma pembelajaran mesin menggunakan operasi matriks untuk melakukan proses pelatihan model, seperti pada jaringan saraf tiruan (*Neural Network*).
 
-$$
-\begin{aligned}
-x + 2y - z &= 3 \
-3x - y + 2z &= 5 \
-2x + y + z &= 4
-\end{aligned}
-$$
+### Grafika Komputer
 
-Matriks augmentasinya:
+Dalam grafika komputer, aljabar linier digunakan untuk melakukan berbagai **transformasi objek**, seperti rotasi, translasi, dan skala. Transformasi ini biasanya direpresentasikan menggunakan matriks yang diterapkan pada koordinat objek 2D atau 3D.
 
-$$
-\begin{bmatrix}
-1 & 2 & -1 & 3 \
-3 & -1 & 2 & 5 \
-2 & 1 & 1 & 4
-\end{bmatrix}
-$$
+### Pemrosesan Citra dan Video
 
-Matriks ini mengandung seluruh informasi sistem.
+Gambar digital dapat direpresentasikan sebagai **matriks piksel**. Dengan menggunakan operasi matriks, citra dapat dimodifikasi, diperbaiki, atau dianalisis untuk berbagai keperluan seperti pengenalan wajah, deteksi objek, dan pengolahan video.
+
+### Sistem Rekomendasi
+
+Platform digital seperti *Netflix*, *Facebook*, atau *YouTube* menggunakan konsep aljabar linier untuk menganalisis hubungan antara pengguna dan konten. Data pengguna direpresentasikan dalam bentuk matriks besar yang kemudian dianalisis untuk menghasilkan rekomendasi yang relevan.
 
 ---
 
-# 4. Operasi Baris Elementer
+# Kesimpulan
 
-Untuk menyederhanakan sistem, kita menggunakan tiga operasi baris elementer:
+Komputasi Aljabar Linier merupakan kombinasi antara teori matematika dari aljabar linier dan kemampuan komputasi dari komputer. Dengan memanfaatkan algoritma dan teknologi komputasi, berbagai permasalahan matematika yang kompleks dapat diselesaikan secara lebih cepat dan efisien.
 
-### 1. Perkalian skalar
-
-$$
-r_i \rightarrow c r_i, \quad c \neq 0
-$$
-
-### 2. Pertukaran baris
-
-$$
-r_i \leftrightarrow r_j
-$$
-
-### 3. Penjumlahan kelipatan baris
-
-$$
-r_i \rightarrow r_i + c r_j
-$$
-
-Dua matriks disebut ekuivalen baris jika salah satunya dapat diperoleh dari yang lain melalui urutan hingga operasi tersebut.
-
----
-
-# 5. Bentuk Eselon Baris
-
-Sesuai definisi formal dalam PDF, matriks berada dalam bentuk eselon baris jika:
-
-1. Semua baris nol berada di bagian bawah.
-2. Entri tak nol pertama pada setiap baris tak nol (pivot) berada lebih ke kanan dibanding pivot pada baris di atasnya.
-3. Semua elemen di bawah pivot bernilai nol.
-
-Jika tambahan syarat berikut dipenuhi:
-
-* Setiap pivot bernilai 1,
-* Setiap kolom pivot hanya memiliki satu entri tak nol,
-
-maka matriks berada dalam bentuk eselon baris tereduksi.
-
----
-
-# 6. Eliminasi Gaussian
-
-Eliminasi Gaussian adalah algoritma sistematis untuk mengubah matriks augmentasi menjadi bentuk eselon baris.
-
-Langkah-langkah umumnya:
-
-1. Cari kolom tak nol paling kiri.
-2. Tukar baris agar entri tak nol berada di posisi atas.
-3. Skala agar pivot bernilai 1.
-4. Nolkan semua elemen di bawah pivot.
-5. Ulangi pada submatriks di bawahnya.
-
----
-
-## Contoh Eliminasi Gaussian
-
-Gunakan sistem:
-
-$$
-\begin{aligned}
-x + y + z &= 6 \
-2x + 3y + z &= 14 \
-x + 2y + 2z &= 10
-\end{aligned}
-$$
-
-Matriks augmentasi:
-
-$$
-\begin{bmatrix}
-1 & 1 & 1 & 6 \
-2 & 3 & 1 & 14 \
-1 & 2 & 2 & 10
-\end{bmatrix}
-$$
-
-Langkah eliminasi:
-
-$$
-r_2 \rightarrow r_2 - 2r_1
-$$
-
-$$
-r_3 \rightarrow r_3 - r_1
-$$
-
-Hasil:
-
-$$
-\begin{bmatrix}
-1 & 1 & 1 & 6 \
-0 & 1 & -1 & 2 \
-0 & 1 & 1 & 4
-\end{bmatrix}
-$$
-
-Kemudian:
-
-$$
-r_3 \rightarrow r_3 - r_2
-$$
-
-$$
-\begin{bmatrix}
-1 & 1 & 1 & 6 \
-0 & 1 & -1 & 2 \
-0 & 0 & 2 & 2
-\end{bmatrix}
-$$
-
-Skalakan:
-
-$$
-r_3 \rightarrow \frac{1}{2} r_3
-$$
-
-$$
-\begin{bmatrix}
-1 & 1 & 1 & 6 \
-0 & 1 & -1 & 2 \
-0 & 0 & 1 & 1
-\end{bmatrix}
-$$
-
-Bentuk eselon baris diperoleh.
-
----
-
-# 7. Eliminasi Gauss–Jordan
-
-Untuk memperoleh bentuk eselon baris tereduksi, kita nolkan elemen di atas pivot.
-
-$$
-r_2 \rightarrow r_2 + r_3
-$$
-
-$$
-r_1 \rightarrow r_1 - r_3
-$$
-
-$$
-r_1 \rightarrow r_1 - r_2
-$$
-
-Hasil akhir:
-
-$$
-\begin{bmatrix}
-1 & 0 & 0 & 2 \
-0 & 1 & 0 & 3 \
-0 & 0 & 1 & 1
-\end{bmatrix}
-$$
-
-Sehingga solusi sistem:
-
-$$
-x = 2, \quad y = 3, \quad z = 1
-$$
-
----
-
-# 8. Teorema Penting
-
-Berdasarkan teorema dalam PDF:
-
-1. Setiap matriks ekuivalen baris dengan suatu matriks dalam bentuk eselon baris.
-2. Setiap matriks ekuivalen baris dengan suatu matriks dalam bentuk eselon baris tereduksi.
-3. Bentuk eselon baris tereduksi bersifat unik.
-
-Bentuk eselon biasa tidak selalu unik.
-
----
-
-# 9. Struktur Solusi
-
-Jika dalam reduksi muncul baris:
-
-$$
-0 = 5
-$$
-
-maka sistem tidak konsisten.
-
-Jika terdapat variabel bebas, maka solusi tak hingga dan dapat dinyatakan parametrik.
-
-Contoh:
-
-$$
-\begin{aligned}
-x + y + z &= 4 \
-2x + 2y + 2z &= 8
-\end{aligned}
-$$
-
-Setelah reduksi:
-
-$$
-x + y + z = 4
-$$
-
-Misalkan:
-
-$$
-y = s, \quad z = t
-$$
-
-maka:
-
-$$
-x = 4 - s - t
-$$
-
-Solusi parametrik:
-
-$$
-(x, y, z) = (4 - s - t, s, t)
-$$
-
----
-
-# Penutup
-
-Materi sistem persamaan linear dan eliminasi Gaussian bukan sekadar prosedur komputasi, tetapi merupakan fondasi struktural dalam aljabar linear. Dengan memahami bagaimana sistem direpresentasikan dalam matriks dan bagaimana operasi baris bekerja, kita memperoleh alat yang sangat kuat untuk menganalisis konsistensi, jumlah solusi, serta struktur ruang solusi.
-
-Jika diperlukan, saya dapat menambahkan bagian pembuktian formal teorema atau memperluas pembahasan menuju konsep rank dan ruang solusi sebagai subruang vektor.
+Karena perannya yang sangat luas dalam berbagai bidang seperti kecerdasan buatan, grafika komputer, analisis data, dan pemrosesan citra, komputasi aljabar linier menjadi salah satu dasar penting dalam perkembangan ilmu komputer dan teknologi modern.
