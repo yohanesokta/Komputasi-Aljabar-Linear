@@ -312,6 +312,26 @@ $$
 
 ------------------------------------------------------------------------
 
+
+# Verifikasi (Cek Jawaban)
+
+Substitusi ke persamaan pertama:
+
+$$
+x_1 + 2x_2 + x_3 + x_4 + x_5
+$$
+
+$$
+= -1 + 2(2) + 4 + 0 + 3
+$$
+
+$$
+= -1 + 4 + 4 + 3 = 10
+$$
+
+Sesuai dengan persamaan awal.
+
+
 # Kesimpulan
 
 Metode eliminasi Gauss adalah cara sistematis untuk menyelesaikan sistem
