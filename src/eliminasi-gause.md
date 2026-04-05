@@ -230,6 +230,88 @@ $$
 
 ------------------------------------------------------------------------
 
+# Menyusun Matriks Eselon Baris
+
+Agar sesuai dengan bentuk eselon baris, kita tukar baris ke-3 dan ke-4:
+
+$$
+\begin{bmatrix}
+1 & 2 & 1 & 1 & 1 & 10 \\
+0 & -1 & 0 & -1 & -1 & -5 \\
+0 & 0 & 1 & 2 & 1 & 7 \\
+0 & 0 & 0 & 1 & 0 & 0 \\
+0 & 0 & 0 & 0 & -1 & -3
+\end{bmatrix}
+$$
+
+------------------------------------------------------------------------
+
+# Substitusi Balik
+
+Kita mulai dari baris paling bawah.
+
+### Baris ke-5
+$$
+- x_5 = -3
+$$
+$$
+x_5 = 3
+$$
+
+### Baris ke-4
+$$
+x_4 = 0
+$$
+
+### Baris ke-3
+$$
+x_3 + 2x_4 + x_5 = 7
+$$
+$$
+x_3 + 0 + 3 = 7
+$$
+$$
+x_3 = 4
+$$
+
+### Baris ke-2
+$$
+- x_2 - x_4 - x_5 = -5
+$$
+$$
+- x_2 - 3 = -5
+$$
+$$
+x_2 = 2
+$$
+
+### Baris ke-1
+$$
+x_1 + 2x_2 + x_3 + x_4 + x_5 = 10
+$$
+$$
+x_1 + 4 + 4 + 0 + 3 = 10
+$$
+$$
+x_1 = -1
+$$
+
+------------------------------------------------------------------------
+
+# Hasil Akhir
+
+$$
+\begin{aligned}
+x_1 &= -1 \\
+x_2 &= 2 \\
+x_3 &= 4 \\
+x_4 &= 0 \\
+x_5 &= 3
+\end{aligned}
+$$
+
+------------------------------------------------------------------------
+
 # Kesimpulan
 
 Metode eliminasi Gauss adalah cara sistematis untuk menyelesaikan sistem
