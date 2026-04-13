@@ -1,6 +1,12 @@
 # Rumus Determinan (Ekspansi Kofaktor)
 
+
+
 ## Definisi Minor
+
+$$
+M_{ij} = \det(A_{ij})
+$$
 
 ```math
 A_{ij} = \text{matriks yang diperoleh dari } A \text{ dengan menghapus baris ke-} i \text{ dan kolom ke-} j

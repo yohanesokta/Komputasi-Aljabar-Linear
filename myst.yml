@@ -22,6 +22,7 @@ project:
         - file: src/rumus-determinan.md
         - file: src/determinan_5x5_full.md
         - file: src/adjoint_invers_5x5.md
+    - file: src/uts.md
 site:
   template: book-theme
   options:
