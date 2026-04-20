@@ -50,7 +50,7 @@ A = \begin{bmatrix} 0 & 2 & -3 \\ 1 & -2 & -1 \\ 0 & 0 & 1 \end{bmatrix}
 
 ---
 
-Pertama hitung determinan A dengan mengekspansi sepanjang baris ketiga:
+hitung determinan A dengan mengekspansi sepanjang baris ketiga:
 
 ```math
 \begin{align*}
@@ -60,7 +60,7 @@ Pertama hitung determinan A dengan mengekspansi sepanjang baris ketiga:
 \end{align*}
 ```
 
-Selanjutnya, hitung adjoin dari A dengan mencari matriks kofaktor ($C_{ij} = (-1)^{i+j} M_{ij}$):
+hitung adjoin dari A dengan mencari matriks kofaktor ($C_{ij} = (-1)^{i+j} M_{ij}$):
 
 ```math
 \begin{align*}
@@ -115,6 +115,94 @@ A^{-1} = \frac{1}{-2} \operatorname{adj} A
 ```
 
 # Soal 3
+
 ```math
-A = \begin{bmatrix} 1 & -3 & 1 & 1 \\ -3 & 1 & 1 & 1 \\ 1 & 1 & -3 & 1 \\ 1 & 1 & 1 & -3 \end{bmatrix}.
+A = \begin{bmatrix} 1 & -3 & 1 & 1 \\ -3 & 1 & 1 & 1 \\ 1 & 1 & -3 & 1 \\ 1 & 1 & 1 & -3 \end{bmatrix}
 ```
+
+---
+
+
+ hitung determinan A dengan mengekspansi sepanjang baris pertama:
+
+```math
+\begin{align*}
+\det A &= 1 \begin{vmatrix} 1 & 1 & 1 \\ 1 & -3 & 1 \\ 1 & 1 & -3 \end{vmatrix} - (-3) \begin{vmatrix} -3 & 1 & 1 \\ 1 & -3 & 1 \\ 1 & 1 & -3 \end{vmatrix} + 1 \begin{vmatrix} -3 & 1 & 1 \\ 1 & 1 & 1 \\ 1 & 1 & -3 \end{vmatrix} - 1 \begin{vmatrix} -3 & 1 & 1 \\ 1 & 1 & -3 \\ 1 & 1 & 1 \end{vmatrix} \\
+&= 1( 1(-3 \cdot -3 - 1 \cdot 1) - 1(1 \cdot -3 - 1 \cdot 1) + 1(1 \cdot 1 - -3 \cdot 1) ) \\
+&\quad + 3( -3(-3 \cdot -3 - 1 \cdot 1) - 1(1 \cdot -3 - 1 \cdot 1) + 1(1 \cdot 1 - -3 \cdot 1) ) \\
+&\quad + 1( -3(1 \cdot -3 - 1 \cdot 1) - 1(1 \cdot -3 - 1 \cdot 1) + 1(1 \cdot 1 - 1 \cdot 1) ) \\
+&\quad - 1( -3(1 \cdot 1 - -3 \cdot 1) - 1(1 \cdot 1 - -3 \cdot 1) + 1(1 \cdot 1 - 1 \cdot 1) ) \\
+&= 1( 1(8) - 1(-4) + 1(4) ) + 3( -3(8) - 1(-4) + 1(4) ) \\
+&\quad + 1( -3(-4) - 1(-4) + 1(0) ) - 1( -3(4) - 1(4) + 1(0) ) \\
+&= 1(8 + 4 + 4) + 3(-24 + 4 + 4) + 1(12 + 4 + 0) - 1(-12 - 4 + 0) \\
+&= 1(16) + 3(-16) + 1(16) - 1(-16) \\
+&= 16 - 48 + 16 + 16 = 0
+\end{align*}
+```
+
+hitung adjoin dari A dengan mencari matriks kofaktor ($C_{ij} = (-1)^{i+j} M_{ij}$):
+
+```math
+\begin{align*}
+C &= \begin{bmatrix}
++\begin{vmatrix} 1 & 1 & 1 \\ 1 & -3 & 1 \\ 1 & 1 & -3 \end{vmatrix} & -\begin{vmatrix} -3 & 1 & 1 \\ 1 & -3 & 1 \\ 1 & 1 & -3 \end{vmatrix} & +\begin{vmatrix} -3 & 1 & 1 \\ 1 & 1 & 1 \\ 1 & 1 & -3 \end{vmatrix} & -\begin{vmatrix} -3 & 1 & 1 \\ 1 & 1 & -3 \\ 1 & 1 & 1 \end{vmatrix} \\[15pt]
+-\begin{vmatrix} -3 & 1 & 1 \\ 1 & -3 & 1 \\ 1 & 1 & -3 \end{vmatrix} & +\begin{vmatrix} 1 & 1 & 1 \\ 1 & -3 & 1 \\ 1 & 1 & -3 \end{vmatrix} & -\begin{vmatrix} 1 & -3 & 1 \\ 1 & 1 & 1 \\ 1 & 1 & -3 \end{vmatrix} & +\begin{vmatrix} 1 & -3 & 1 \\ 1 & 1 & -3 \\ 1 & 1 & 1 \end{vmatrix} \\[15pt]
++\begin{vmatrix} -3 & 1 & 1 \\ 1 & 1 & 1 \\ 1 & 1 & -3 \end{vmatrix} & -\begin{vmatrix} 1 & 1 & 1 \\ -3 & 1 & 1 \\ 1 & 1 & -3 \end{vmatrix} & +\begin{vmatrix} 1 & -3 & 1 \\ -3 & 1 & 1 \\ 1 & 1 & -3 \end{vmatrix} & -\begin{vmatrix} 1 & -3 & 1 \\ -3 & 1 & 1 \\ 1 & 1 & 1 \end{vmatrix} \\[15pt]
+-\begin{vmatrix} -3 & 1 & 1 \\ 1 & 1 & -3 \\ 1 & 1 & 1 \end{vmatrix} & +\begin{vmatrix} 1 & 1 & 1 \\ -3 & 1 & 1 \\ 1 & 1 & -3 \end{vmatrix} & -\begin{vmatrix} 1 & -3 & 1 \\ -3 & 1 & 1 \\ 1 & 1 & 1 \end{vmatrix} & +\begin{vmatrix} 1 & -3 & 1 \\ -3 & 1 & 1 \\ 1 & 1 & -3 \end{vmatrix}
+\end{bmatrix} \\
+\end{align*}
+```
+
+
+```math
+\begin{align*}
+C &= \begin{bmatrix}
++(16) & -(-16) & +(16) & -(-16) \\
+-(-16) & +(16) & -(-16) & +(16) \\
++(16) & -(-16) & +(16) & -(-16) \\
+-(-16) & +(16) & -(-16) & +(16)
+\end{bmatrix} 
+= \begin{bmatrix}
+16 & 16 & 16 & 16 \\
+16 & 16 & 16 & 16 \\
+16 & 16 & 16 & 16 \\
+16 & 16 & 16 & 16
+\end{bmatrix}
+\end{align*}
+```
+
+Karena adjoin A adalah matriks transpos dari matriks kofaktor ($C^T$), maka kita peroleh:
+
+```math
+\operatorname{adj} A = C^T =
+\begin{bmatrix}
+16 & 16 & 16 & 16 \\
+16 & 16 & 16 & 16 \\
+16 & 16 & 16 & 16 \\
+16 & 16 & 16 & 16
+\end{bmatrix}^T
+=
+\begin{bmatrix}
+16 & 16 & 16 & 16 \\
+16 & 16 & 16 & 16 \\
+16 & 16 & 16 & 16 \\
+16 & 16 & 16 & 16
+\end{bmatrix}
+```
+
+Sehingga invers matriksnya dirumuskan dengan:
+
+```math
+A^{-1} = \frac{1}{\det{A}} \operatorname{adj} A
+= \frac{1}{0}
+\begin{bmatrix}
+16 & 16 & 16 & 16 \\
+16 & 16 & 16 & 16 \\
+16 & 16 & 16 & 16 \\
+16 & 16 & 16 & 16
+\end{bmatrix}
+```
+
+Karena $\det(A) = 0$, maka operasi invers ini bernilai tak terdefinisi 
+
+matriks A adalah singular atau tidak memiliki invers
