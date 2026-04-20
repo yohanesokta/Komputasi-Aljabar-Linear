@@ -48,6 +48,71 @@ A = \begin{bmatrix} -7 & -5 \\ 1 & 4 \end{bmatrix}
 A = \begin{bmatrix} 0 & 2 & -3 \\ 1 & -2 & -1 \\ 0 & 0 & 1 \end{bmatrix}
 ```
 
+---
+
+Pertama hitung determinan A dengan mengekspansi sepanjang baris ketiga:
+
+```math
+\begin{align*}
+\det A &= 0 \begin{vmatrix} 2 & -3 \\ -2 & -1 \end{vmatrix} - 0 \begin{vmatrix} 0 & -3 \\ 1 & -1 \end{vmatrix} + 1 \begin{vmatrix} 0 & 2 \\ 1 & -2 \end{vmatrix} \\
+&= 1((0)(-2) - (1)(2)) \\
+&= 1(0 - 2) = -2
+\end{align*}
+```
+
+Selanjutnya, hitung adjoin dari A dengan mencari matriks kofaktor ($C_{ij} = (-1)^{i+j} M_{ij}$):
+
+```math
+\begin{align*}
+C &=
+\begin{bmatrix}
++((-2)(1) - (-1)(0)) & -((1)(1) - (-1)(0)) & +((1)(0) - (-2)(0)) \\
+-((2)(1) - (-3)(0)) & +((0)(1) - (-3)(0)) & -((0)(0) - (2)(0)) \\
++((2)(-1) - (-3)(-2)) & -((0)(-1) - (-3)(1)) & +((0)(-2) - (2)(1))
+\end{bmatrix} \\
+&=
+\begin{bmatrix}
++(-2 - 0) & -(1 - 0) & +(0 - 0) \\
+-(2 - 0) & +(0 - 0) & -(0 - 0) \\
++(-2 - 6) & -(0 - (-3)) & +(0 - 2)
+\end{bmatrix}
+=
+\begin{bmatrix}
+-2 & -1 & 0 \\
+-2 & 0 & 0 \\
+-8 & -3 & -2
+\end{bmatrix}
+\end{align*}
+```
+
+Karena adjoin A adalah matriks transpos dari matriks kofaktor ($C^T$), maka kita peroleh:
+
+```math
+\operatorname{adj} A = C^T =
+\begin{bmatrix}
+-2 & -1 & 0 \\
+-2 & 0 & 0 \\
+-8 & -3 & -2
+\end{bmatrix}^T
+=
+\begin{bmatrix}
+-2 & -2 & -8 \\
+-1 & 0 & -3 \\
+0 & 0 & -2
+\end{bmatrix}
+```
+
+Sehingga invers matriksnya adalah:
+
+```math
+A^{-1} = \frac{1}{-2} \operatorname{adj} A
+= \frac{1}{-2}
+\begin{bmatrix}
+-2 & -2 & -8 \\
+-1 & 0 & -3 \\
+0 & 0 & -2
+\end{bmatrix}
+```
 
 # Soal 3
 ```math
