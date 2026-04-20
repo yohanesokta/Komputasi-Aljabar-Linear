@@ -1,4 +1,8 @@
-# Evaluasi Determinan dan Invers
+---
+title: Evaluasi Determinan
+date: 2026-04-20
+---
+
 
 ### A. Hitunglah determinan matrik berikut dengan menggunakan rumus expansi baris
 
