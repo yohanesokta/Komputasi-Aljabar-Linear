@@ -60,46 +60,36 @@ hitung determinan A dengan mengekspansi sepanjang baris ketiga:
 \end{align*}
 ```
 
-hitung adjoin dari A dengan mencari matriks kofaktor ($C_{ij} = (-1)^{i+j} M_{ij}$):
+hitung adjoin dari A menggunakan rumus $(\operatorname{adj} A)_{ij} = (-1)^{i+j} M_{ji}$:
 
 ```math
 \begin{align*}
-C &=
-\begin{bmatrix}
-+((-2)(1) - (-1)(0)) & -((1)(1) - (-1)(0)) & +((1)(0) - (-2)(0)) \\
--((2)(1) - (-3)(0)) & +((0)(1) - (-3)(0)) & -((0)(0) - (2)(0)) \\
-+((2)(-1) - (-3)(-2)) & -((0)(-1) - (-3)(1)) & +((0)(-2) - (2)(1))
+\operatorname{adj} A &= \begin{bmatrix}
++M_{11} & -M_{21} & +M_{31} \\
+-M_{12} & +M_{22} & -M_{32} \\
++M_{13} & -M_{23} & +M_{33}
 \end{bmatrix} \\
-&=
-\begin{bmatrix}
-+(-2 - 0) & -(1 - 0) & +(0 - 0) \\
--(2 - 0) & +(0 - 0) & -(0 - 0) \\
-+(-2 - 6) & -(0 - (-3)) & +(0 - 2)
+&= \begin{bmatrix}
++\begin{vmatrix} -2 & -1 \\ 0 & 1 \end{vmatrix} & -\begin{vmatrix} 2 & -3 \\ 0 & 1 \end{vmatrix} & +\begin{vmatrix} 2 & -3 \\ -2 & -1 \end{vmatrix} \\[10pt]
+-\begin{vmatrix} 1 & -1 \\ 0 & 1 \end{vmatrix} & +\begin{vmatrix} 0 & -3 \\ 0 & 1 \end{vmatrix} & -\begin{vmatrix} 0 & -3 \\ 1 & -1 \end{vmatrix} \\[10pt]
++\begin{vmatrix} 1 & -2 \\ 0 & 0 \end{vmatrix} & -\begin{vmatrix} 0 & 2 \\ 0 & 0 \end{vmatrix} & +\begin{vmatrix} 0 & 2 \\ 1 & -2 \end{vmatrix}
+\end{bmatrix} \\
+&= \begin{bmatrix}
++((-2)(1) - (-1)(0)) & -((2)(1) - (-3)(0)) & +((2)(-1) - (-3)(-2)) \\
+-((1)(1) - (-1)(0)) & +((0)(1) - (-3)(0)) & -((0)(-1) - (-3)(1)) \\
++((1)(0) - (-2)(0)) & -((0)(0) - (2)(0)) & +((0)(-2) - (2)(1))
+\end{bmatrix} \\
+&= \begin{bmatrix}
++(-2 - 0) & -(2 - 0) & +(-2 - 6) \\
+-(1 - 0) & +(0 - 0) & -(0 - (-3)) \\
++(0 - 0) & -(0 - 0) & +(0 - 2)
 \end{bmatrix}
-=
-\begin{bmatrix}
--2 & -1 & 0 \\
--2 & 0 & 0 \\
--8 & -3 & -2
-\end{bmatrix}
-\end{align*}
-```
-
-Karena adjoin A adalah matriks transpos dari matriks kofaktor ($C^T$), maka kita peroleh:
-
-```math
-\operatorname{adj} A = C^T =
-\begin{bmatrix}
--2 & -1 & 0 \\
--2 & 0 & 0 \\
--8 & -3 & -2
-\end{bmatrix}^T
-=
-\begin{bmatrix}
+= \begin{bmatrix}
 -2 & -2 & -8 \\
 -1 & 0 & -3 \\
 0 & 0 & -2
 \end{bmatrix}
+\end{align*}
 ```
 
 Sehingga invers matriksnya adalah:
@@ -140,23 +130,35 @@ A = \begin{bmatrix} 1 & -3 & 1 & 1 \\ -3 & 1 & 1 & 1 \\ 1 & 1 & -3 & 1 \\ 1 & 1 
 \end{align*}
 ```
 
-hitung adjoin dari A dengan mencari matriks kofaktor ($C_{ij} = (-1)^{i+j} M_{ij}$):
+hitung adjoin dari A menggunakan rumus $(\operatorname{adj} A)_{ij} = (-1)^{i+j} M_{ji}$:
 
 ```math
 \begin{align*}
-C &= \begin{bmatrix}
+\operatorname{adj} A &= \begin{bmatrix}
++M_{11} & -M_{21} & +M_{31} & -M_{41} \\
+-M_{12} & +M_{22} & -M_{32} & +M_{42} \\
++M_{13} & -M_{23} & +M_{33} & -M_{43} \\
+-M_{14} & +M_{24} & -M_{34} & +M_{44}
+\end{bmatrix} \\[10pt]
+&= \begin{bmatrix}
 +\begin{vmatrix} 1 & 1 & 1 \\ 1 & -3 & 1 \\ 1 & 1 & -3 \end{vmatrix} & -\begin{vmatrix} -3 & 1 & 1 \\ 1 & -3 & 1 \\ 1 & 1 & -3 \end{vmatrix} & +\begin{vmatrix} -3 & 1 & 1 \\ 1 & 1 & 1 \\ 1 & 1 & -3 \end{vmatrix} & -\begin{vmatrix} -3 & 1 & 1 \\ 1 & 1 & -3 \\ 1 & 1 & 1 \end{vmatrix} \\[15pt]
 -\begin{vmatrix} -3 & 1 & 1 \\ 1 & -3 & 1 \\ 1 & 1 & -3 \end{vmatrix} & +\begin{vmatrix} 1 & 1 & 1 \\ 1 & -3 & 1 \\ 1 & 1 & -3 \end{vmatrix} & -\begin{vmatrix} 1 & -3 & 1 \\ 1 & 1 & 1 \\ 1 & 1 & -3 \end{vmatrix} & +\begin{vmatrix} 1 & -3 & 1 \\ 1 & 1 & -3 \\ 1 & 1 & 1 \end{vmatrix} \\[15pt]
 +\begin{vmatrix} -3 & 1 & 1 \\ 1 & 1 & 1 \\ 1 & 1 & -3 \end{vmatrix} & -\begin{vmatrix} 1 & 1 & 1 \\ -3 & 1 & 1 \\ 1 & 1 & -3 \end{vmatrix} & +\begin{vmatrix} 1 & -3 & 1 \\ -3 & 1 & 1 \\ 1 & 1 & -3 \end{vmatrix} & -\begin{vmatrix} 1 & -3 & 1 \\ -3 & 1 & 1 \\ 1 & 1 & 1 \end{vmatrix} \\[15pt]
 -\begin{vmatrix} -3 & 1 & 1 \\ 1 & 1 & -3 \\ 1 & 1 & 1 \end{vmatrix} & +\begin{vmatrix} 1 & 1 & 1 \\ -3 & 1 & 1 \\ 1 & 1 & -3 \end{vmatrix} & -\begin{vmatrix} 1 & -3 & 1 \\ -3 & 1 & 1 \\ 1 & 1 & 1 \end{vmatrix} & +\begin{vmatrix} 1 & -3 & 1 \\ -3 & 1 & 1 \\ 1 & 1 & -3 \end{vmatrix}
-\end{bmatrix} \\
-\end{align*}
-```
-
-
-```math
-\begin{align*}
-C &= \begin{bmatrix}
+\end{bmatrix} \\[10pt]
+&= \begin{bmatrix}
++( 1((-3)(-3) - (1)(1)) - 1((1)(-3) - (1)(1)) + 1((1)(1) - (-3)(1)) ) & -( -3((-3)(-3) - (1)(1)) - 1((1)(-3) - (1)(1)) + 1((1)(1) - (-3)(1)) ) & +( -3((1)(-3) - (1)(1)) - 1((1)(-3) - (1)(1)) + 1((1)(1) - (1)(1)) ) & -( -3((1)(1) - (-3)(1)) - 1((1)(1) - (-3)(1)) + 1((1)(1) - (1)(1)) ) \\[15pt]
+-( -3((-3)(-3) - (1)(1)) - 1((1)(-3) - (1)(1)) + 1((1)(1) - (-3)(1)) ) & +( 1((-3)(-3) - (1)(1)) - 1((1)(-3) - (1)(1)) + 1((1)(1) - (-3)(1)) ) & -( 1((1)(-3) - (1)(1)) - (-3)((1)(-3) - (1)(1)) + 1((1)(1) - (1)(1)) ) & +( 1((1)(1) - (-3)(1)) - (-3)((1)(1) - (-3)(1)) + 1((1)(1) - (1)(1)) ) \\[15pt]
++( -3((1)(-3) - (1)(1)) - 1((1)(-3) - (1)(1)) + 1((1)(1) - (1)(1)) ) & -( 1((1)(-3) - (1)(1)) - 1((-3)(-3) - (1)(1)) + 1((-3)(1) - (1)(1)) ) & +( 1((1)(-3) - (1)(1)) - (-3)((-3)(-3) - (1)(1)) + 1((-3)(1) - (1)(1)) ) & -( 1((1)(1) - (1)(1)) - (-3)((-3)(1) - (1)(1)) + 1((-3)(1) - (1)(1)) ) \\[15pt]
+-( -3((1)(1) - (-3)(1)) - 1((1)(1) - (-3)(1)) + 1((1)(1) - (1)(1)) ) & +( 1((1)(-3) - (1)(1)) - 1((-3)(-3) - (1)(1)) + 1((-3)(1) - (1)(1)) ) & -( 1((1)(1) - (1)(1)) - (-3)((-3)(1) - (1)(1)) + 1((-3)(1) - (1)(1)) ) & +( 1((1)(-3) - (1)(1)) - (-3)((-3)(-3) - (1)(1)) + 1((-3)(1) - (1)(1)) )
+\end{bmatrix} \\[10pt]
+&= \begin{bmatrix}
++( 1(8) - 1(-4) + 1(4) ) & -( -3(8) - 1(-4) + 1(4) ) & +( -3(-4) - 1(-4) + 1(0) ) & -( -3(4) - 1(4) + 1(0) ) \\[10pt]
+-( -3(8) - 1(-4) + 1(4) ) & +( 1(8) - 1(-4) + 1(4) ) & -( 1(-4) - (-3)(-4) + 1(0) ) & +( 1(4) - (-3)(4) + 1(0) ) \\[10pt]
++( -3(-4) - 1(-4) + 1(0) ) & -( 1(-4) - 1(8) + 1(-4) ) & +( 1(-4) - (-3)(8) + 1(-4) ) & -( 1(0) - (-3)(-4) + 1(-4) ) \\[10pt]
+-( -3(4) - 1(4) + 1(0) ) & +( 1(-4) - 1(8) + 1(-4) ) & -( 1(0) - (-3)(-4) + 1(-4) ) & +( 1(-4) - (-3)(8) + 1(-4) )
+\end{bmatrix} \\[10pt]
+&= \begin{bmatrix}
 +(16) & -(-16) & +(16) & -(-16) \\
 -(-16) & +(16) & -(-16) & +(16) \\
 +(16) & -(-16) & +(16) & -(-16) \\
@@ -169,25 +171,6 @@ C &= \begin{bmatrix}
 16 & 16 & 16 & 16
 \end{bmatrix}
 \end{align*}
-```
-
-Karena adjoin A adalah matriks transpos dari matriks kofaktor ($C^T$), maka kita peroleh:
-
-```math
-\operatorname{adj} A = C^T =
-\begin{bmatrix}
-16 & 16 & 16 & 16 \\
-16 & 16 & 16 & 16 \\
-16 & 16 & 16 & 16 \\
-16 & 16 & 16 & 16
-\end{bmatrix}^T
-=
-\begin{bmatrix}
-16 & 16 & 16 & 16 \\
-16 & 16 & 16 & 16 \\
-16 & 16 & 16 & 16 \\
-16 & 16 & 16 & 16
-\end{bmatrix}
 ```
 
 Sehingga invers matriksnya dirumuskan dengan:
