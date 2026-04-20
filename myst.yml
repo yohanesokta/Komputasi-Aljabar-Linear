@@ -25,7 +25,7 @@ project:
     - file: src/evaluasi/intro.md
       children:
         - file: src/evaluasi/determinan.md
-        - file: src/evaluasi/adjoin.md
+        # - file: src/evaluasi/adjoin.md
 site: 
   template: book-theme
   options:
