@@ -26,11 +26,12 @@ project:
       children:
         - file: src/evaluasi/determinan.md
         - file: src/evaluasi/adjoin.md
+    - file: src/EigenFace.md
 site: 
   template: book-theme
   options:
     favicon: https://avatars.githubusercontent.com/u/111877508?v=4
-    logo: ./img/utm-logo.png  
+    logo: ./img/foto.png  
     # numbered: true
     style: assets/custom.css
   actions:
