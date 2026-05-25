@@ -21,7 +21,15 @@ project:
       children:
         - file: src/evaluasi/determinan.md
         - file: src/evaluasi/adjoin.md
-    - file: src/EigenFace.md
+    - file: src/eigenface_docs/01-konsep.md
+      title: Pengenalan Wajah (Eigenface)
+      children:
+        - file: src/eigenface_docs/02-opencv-dasar.md
+        - file: src/eigenface_docs/03-matematika-svd.md
+        - file: src/eigenface_docs/05-dekomposisi-matriks.md
+        - file: src/eigenface_docs/04-implementasi-kode.md
+        - file: src/EigenFace.md
+          title: Tutorial C++ & Instalasi
 site: 
   template: book-theme
   options:
