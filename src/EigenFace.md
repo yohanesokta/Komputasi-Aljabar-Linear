@@ -91,7 +91,7 @@ Proyek ini mengimplementasikan langkah-langkah di atas secara real-time:
 1.  **Pelatihan**: Dataset dibaca dari `dataset/uang`, diproses (grayscale, histogram equalization, resize), lalu dilatih menggunakan kelas `EigenFace`.
 2.  **Prediksi**: Kamera menangkap frame, mendeteksi area wajah, melakukan praproses yang sama, lalu memanggil fungsi `predict()` untuk mendapatkan identitas wajah tersebut.
 
-### Struktur Kelas Utama
-- `train()`: Melakukan Mean Centering dan SVD untuk mendapatkan `eigenvectors`.
-- `project()`: Memetakan citra ke ruang dimensi rendah.
-- `predict()`: Mencari tetangga terdekat (Nearest Neighbor) di ruang wajah.
+
+# Documentation
+
+![Image](../img/docs.png)
