@@ -1,4 +1,3 @@
-# See docs at: https://mystmd.org/guide/frontmatter
 version: 1
 project:
   id: 16618fd8-81e7-4e92-987f-36405c569003
@@ -6,11 +5,7 @@ project:
   description:
   authors : [Yohanes Oktanio]
   github: https://github.com/yohanesokta
-  
   keywords: [Komputasi Aljabar Linier]
-  # authors: []
-  # github:
-  # To autogenerate a Table of Contents, run "jupyter book init --write-toc"
   toc:
     - file: src/s-linear.md
     - file: src/persamaan-linier.ipynb
@@ -31,8 +26,7 @@ site:
   template: book-theme
   options:
     favicon: https://avatars.githubusercontent.com/u/111877508?v=4
-    logo: ./img/foto.png  
-    # numbered: true
+    logo: ./img/foto.png
     style: assets/custom.css
   actions:
     - title: Follow GitHub
